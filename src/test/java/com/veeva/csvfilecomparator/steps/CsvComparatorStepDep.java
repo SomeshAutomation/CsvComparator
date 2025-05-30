@@ -8,9 +8,11 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVRecord;
 import org.testng.asserts.SoftAssert;
 
+@Slf4j
 public class CsvComparatorStepDep {
 
     private List<CSVRecord> firstFileRecords;

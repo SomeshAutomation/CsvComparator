@@ -1,4 +1,4 @@
-package com.veeva.csvfilecomparator.runner;
+package com.veeva.csvfilecomparator;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features",
+        features = "src/test/resources/features",
         plugin = {
                 "pretty",
                 "html:target/results/cucumber-reports.html",
@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "timeline:target/results/timeline"
         },
-        glue = "com/veeva/csvfilecomparator",
+        glue = "com.veeva.csvfilecomparator",
         monochrome = true,
         tags = "@CsvComparison")
 public class TestRunner {
