@@ -19,6 +19,23 @@
 * Java 11 and Maven Installed, path set in environmental variables
 * Allure configured
   (Please refer https://docs.qameta.io/allure/#_installing_a_commandline)
+------------------------------------------------------------
+
+## CSV Comparison Logic Explained
+This test case implements logic to compare two CSV files and identify differences at both the row and column level. The following steps outline the process:
+
+**CSV File Loading**
+* Both CSV files are read and parsed into CSVRecord lists using the apache.commons-csv library.
+
+**Row-wise & Column-wise Comparison**
+* Each corresponding row from both files is compared value-by-value (column-by-column). Differences in any column values are detected and reported.
+
+**Column Count Validation**
+* If any row in either file contains more or fewer columns than its counterpart, this inconsistency is identified and asserted during the comparison.
+
+**Row Count Validation**
+* If one file has additional or missing rows compared to the other, those discrepancies (extra or missing records) are captured and added as attachments to the Allure report for further analysis.
+
 
 ------------------------------------------------------------
 ## Running Project
@@ -31,9 +48,6 @@ mvn clean test -Dcucumber.filter.tags="@CsvComparison"
 ```
 ------------------------------------------------------------
 ## Reports
-
-## Cucumber Report**
-One can find cucumber Reports by opening target/results/cucumber-reports.html
 
 ## Allure Report**
 
