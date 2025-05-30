@@ -17,6 +17,6 @@ import org.junit.runner.RunWith;
         },
         glue = "com/veeva/csvfilecomparator",
         monochrome = true,
-        tags = "@FeatureName")
+        tags = "@CsvComparison")
 public class TestRunner {
 }

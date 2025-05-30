@@ -8,12 +8,12 @@ import java.util.Properties;
 
 @Slf4j
 public class Hooks {
-    public static Properties properties = new Properties();
+    public static Properties PROPERTIES = new Properties();
     public static final String CONFIG_FILE_NAME = "config.properties";
 
     @BeforeAll
     public static void beforeAllSetUp() throws IOException {
-        properties.load(Hooks.class.getClassLoader().getResourceAsStream(CONFIG_FILE_NAME));
+        PROPERTIES.load(Hooks.class.getClassLoader().getResourceAsStream(CONFIG_FILE_NAME));
         log.info("in the Before All : config properties loaded");
     }
 }
