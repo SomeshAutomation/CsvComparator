@@ -36,6 +36,10 @@ This test case implements logic to compare two CSV files and identify difference
 **Row Count Validation**
 * If one file has additional or missing rows compared to the other, those discrepancies (extra or missing records) are captured and added as attachments to the Allure report for further analysis.
 
+------------------------------------------------------------
+## Test Data Setup: CSV files
+* copy csv file to folder src/test/resources/testdata and then update file name in the test case ( CsvComparatorTest.feature ). This is current option available.
+* User can always change the test data folder in config file( property name : testDataPath ) and then then application will try to pick up csv files from the updated path.
 
 ------------------------------------------------------------
 ## Running Project
