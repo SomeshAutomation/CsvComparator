@@ -2,6 +2,7 @@ package com.veeva.csvfilecomparator.utils;
 
 import com.veeva.csvfilecomparator.runner.Hooks;
 import io.qameta.allure.Allure;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.testng.asserts.SoftAssert;
@@ -9,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 import java.io.*;
 import java.util.List;
 
-
+@Slf4j
 public class CommonFunction {
 
     public List<CSVRecord> getCSVRecordList(String csvFileName) {
