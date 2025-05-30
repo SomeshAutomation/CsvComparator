@@ -9,4 +9,6 @@ Feature: Compare two csv files and identify differences
     Then the system should identify differences
     Examples:
       | filename1 | filename2 |
-      | file1.csv | file2.csv |
+      | File1_ExpectedEmployeeData.csv | File2_ActualEmployeeData.csv |
+      | File1_ExpectedEmployeeData.csv | File3_HappyPathData.csv |
+      | File1_ExpectedEmployeeData.csv | File4_Empty.csv |
