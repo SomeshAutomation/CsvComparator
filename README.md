@@ -9,7 +9,7 @@
 
 * [Maven](https://maven.apache.org/) - Dependency Management and life cycle
 * [Java 11] - Programming Language
-* [Cucumber](https://cucumber.io/) - Framework ( Increase readability)
+* [Cucumber + Junit](https://cucumber.io/) - Testing Framework ( Increase readability)
 * [Allure Reports](https://qameta.io/allure-report/) - Reporting
 * [Lombok](https://projectlombok.org/) - Provides Annotation to save space and time , also logging
 

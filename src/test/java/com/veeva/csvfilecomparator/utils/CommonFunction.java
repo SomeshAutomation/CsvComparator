@@ -19,13 +19,16 @@ public class CommonFunction {
             filereader = new FileReader(new File(Hooks.PROPERTIES.getProperty("testDataPath") + csvFileName));
             return CSVFormat.DEFAULT.parse(filereader).getRecords();
         } catch (FileNotFoundException e) {
+            log.error("File Not Found Exception !!!");
             throw new RuntimeException(e);
         } catch (IOException e) {
+            log.error("IO Exception Triggered !!!");
             throw new RuntimeException(e);
         }
 
     }
 
+    //Compare each record column wise and return result in softassert object.
     public SoftAssert compareCSVRecord(CSVRecord expectedRecord, CSVRecord actualRecord, SoftAssert softAssert) {
         String[] expectedValues = expectedRecord.values();
         String[] actualValues = actualRecord.values();
